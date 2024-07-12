@@ -9,9 +9,17 @@ import siteSQB from '../assets/image/project/siteSQB.png'
 import RehabCenter from '../assets/image/project/RehabCenter.png'
 import LCT from '../assets/image/project/LCT.png'
 import PBS from '../assets/image/project/PBS.png'
+import tu from '../assets/image/project/tu.png'
 
 const initialState = {
     list: [{
+        image: tu,
+        projectName: "Tayelsizdik-urpaktary",
+        subPosition: [],
+        projectURL: "https://t-u.kz/",
+        about: "С 2021 года, по инициативе Президента Касым-Жомарта Кемелевича Токаева ежегодно на конкурсной основе для молодежи присуждается грант «Тәуелсіздік ұрпақтары».",
+        skills: ["React.JS", "PostgreSQL", "JavaScript", "Linux", "Nginx", "Figma", "HTML5", "CSS3", "Flexbox"]
+    }, {
         image: PP,
         projectName: "ГК \"Проектная ПРАКТИКА\"",
         subPosition: [],

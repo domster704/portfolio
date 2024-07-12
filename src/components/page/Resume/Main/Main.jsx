@@ -5,14 +5,8 @@ import * as style from './Main.module.css'
 import next from '../../../../assets/image/svg/next.svg';
 import arrow_back from '../../../../assets/image/svg/arrow_back.svg';
 import arrow_next from '../../../../assets/image/svg/arrow_next.svg';
-import ITS from '../../../../assets/image/certificate/ITS.png';
-import CP from '../../../../assets/image/certificate/CP.png';
-import KM from '../../../../assets/image/certificate/KM.png';
 
 import resumePDF from '../../../../assets/docs/resume.pdf';
-import CP_PDF from '../../../../assets/docs/CP.pdf';
-import ITS_PDF from '../../../../assets/docs/ITS.pdf';
-import KM_PDF from '../../../../assets/docs/KM.pdf';
 
 import {SocialNetwork} from "../Header/Header";
 import JobElement from "./JobElement/JobElement";
@@ -45,13 +39,11 @@ const Main = (props) => {
                         index: index,
                         isActive: true
                     }))
-                    // el.classList.add(style.active);
                 } else {
                     dispatch(setActive({
                         index: index,
                         isActive: false
                     }))
-                    // el.classList.remove(style.active);
                 }
             });
         }
@@ -99,12 +91,11 @@ const Main = (props) => {
                         конфигурации виртуальных машин.
                     </p>
                     <p>
-                        Мобильную разработку я изучил в
-                        <a href="https://www.samsung.com/ru/inrussia/school/" target="_blank">IT School Samsung</a>.
-                        После
-                        этого я работал в компании <a href="https://amberizh.ru/" target="_blank">Янтарь+</a> 3 года.
-                        Параллельно с
-                        этим набирал опыт в следующих компаниях: ПРОНЕТКОМ и Dial Digital Agency.
+                        Мобильную разработку я изучил в <a href="https://www.samsung.com/ru/inrussia/school/"
+                                                           target="_blank"> IT School Samsung</a>.
+                        После этого я работал в компании <a href="https://amberizh.ru/" target="_blank">Янтарь+</a> 3
+                        года.
+                        Параллельно с этим набирал опыт в следующих компаниях: ПРОНЕТКОМ и Dial Digital Agency.
                     </p>
                     <p>
                         В <a href="https://amberizh.ru/" target="_blank">Янтарь+</a> я занимал позицию
