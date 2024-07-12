@@ -1,0 +1,4 @@
+.headerMain {
+    padding: 0 var(--main-padding);
+    position: relative;
+}

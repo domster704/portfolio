@@ -1,0 +1,163 @@
+.element {
+    display: flex;
+    gap: 2.5rem;
+    padding: 1rem;
+    width: var(--block-width);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.element:hover {
+    background-color: rgba(23, 38, 73, 0.5);
+    border: 1px solid rgba(23, 38, 73, 1);
+    box-shadow: 0 0.05rem 0.1rem 0 rgb(23, 38, 73);
+    cursor: pointer;
+}
+
+.elementBlockHeader_linkHover {
+    display: none;
+}
+
+.element:hover .elementBlockHeader_linkDefault > .elementBlockHeader_link {
+    display: none;
+}
+
+/*TODO: сделать через animation*/
+.element:hover .elementBlockHeader_linkHover {
+    display: block;
+    transform: translateX(0.3rem) translateY(-0.3rem);
+}
+
+.element:hover .elementBlockHeader > div {
+    color: #5EEAD4;
+}
+
+.elementHeader {
+    color: #64748B;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.01875rem;
+    text-transform: uppercase;
+    line-height: 1.45rem;
+    align-self: start;
+    min-width: 7.75rem;
+}
+
+.elementBlockUnderHeader {
+    display: flex;
+    flex-direction: column;
+    color: #64748B;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+
+.elementBlockHeader {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.elementBlockHeader > div {
+    color: #E2E8F0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+
+.elementBlockHeader_link {
+    background-size: contain;
+}
+
+.jobsList > a, .projectsList > a {
+    text-decoration: none;
+    text-decoration-color: transparent;
+}
+
+.specialization {
+    margin-bottom: 0.5rem;
+}
+
+.specializationAbout {
+    color: #94A3B8;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    margin-bottom: 1rem;
+}
+
+.skillsList {
+    display: inline-block;
+}
+
+.skill {
+    display: inline-block;
+    padding: 0.1875rem 0.78125rem 0.3125rem 0.75rem;
+    align-items: center;
+    border-radius: 624.9375rem;
+    background: rgba(45, 212, 191, 0.10);
+    margin-bottom: 0.37rem;
+    margin-right: 0.37rem;
+
+    color: #5EEAD4;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+
+.imageBlock {
+    --image-width: 7.5rem;
+    --image-height: 4.32813rem;
+    --border-width: 0.125rem;
+    width: calc(var(--image-width) + var(--border-width) * 2);
+    height: calc(var(--image-height) + var(--border-width) * 2);
+    border-radius: 0.25rem;
+    border: var(--border-width) solid rgba(226, 232, 240, 0.10);
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image {
+    width: var(--image-width);
+    height: var(--image-height);
+    border-radius: var(--border-width);
+}
+
+.imageMobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .element {
+        width: 100%;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .element {
+        display: block;
+    }
+
+    .jobsList .elementHeader {
+        margin-bottom: 0.5rem;
+    }
+
+    .mobile-projects .elementHeader {
+        margin-top: 1rem;
+    }
+
+    .elementHeaderImageDesktop {
+        display: none;
+    }
+
+    .imageMobile {
+        display: block;
+    }
+
+    .imageBlock {
+        --image-width: 13rem;
+        --image-height: calc(var(--image-width) / 7.5 * 4.32813);
+    }
+}

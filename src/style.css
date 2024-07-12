@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "Murecho";
+    src: url("assets/font/Murecho/Murecho-VariableFont_wght.ttf") format('truetype');
+}
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s all ease;
+    font-family: "Murecho", sans-serif;
+}
+
+:root {
+    --block-width: 33rem;
+    --main-padding: calc((100vw - 2 * var(--block-width)) / 2);
+}
+
+html::-webkit-scrollbar {
+    width: 0.75vw;
+    background: #E2E8F030;
+    padding-right: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #E2E8F0;
+    border-radius: 0.5vw;
+}
+
+body {
+    background: #0F172A;
+    font-family: Murecho, serif;
+}
+
+.spotlight {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+a {
+    text-decoration-color: transparent;
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --main-padding: 1.5rem !important;
+    }
+
+    .spotlight {
+        display: none;
+        position: relative;
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --main-padding: 8vw;
+        --block-width: calc((100vw - 2 * var(--main-padding)) / 2);
+    }
+}
