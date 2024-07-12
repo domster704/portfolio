@@ -1,5 +1,4 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {fetchCategories} from './applicationThunk';
 
 const initialState = {
     list: [{
@@ -20,13 +19,21 @@ const initialState = {
         about: "Поддержка уществующего проекта, code-reviewing, написание SQL-запросов, мобильная разработка.<br> Ускорил многие SQL-запросы в среднем на 40%.",
         skills: ["JavaScript", "HTML", "CSS", "Cordova", "SVN", "PostgreSQL", "Node.js", "RESTful", "SFA системы"]
     }, {
-        date: "октябрь 2023 — сейчас",
+        date: "октябрь 2023 — май 2024",
         position: "Front-end developer",
         subPosition: ["Web-разработчик", "Контент-менеджер"],
         companyName: "Dial Digital Agency",
         companyURL: "https://dialweb.ru/",
         about: "Верстка, разработка сайтов под CMS Битрикс.<br> Выполнение работ на существующих сайтах",
         skills: ["JavaScript", "HTML5", "CSS3", "CMS", "Bitrix CMS", "Figma", "PHP", "Bitrix24", "Flexbox", "БЭМ"]
+    }, {
+        date: "апрель 2024 — сейчас",
+        position: "Full-stack developer",
+        subPosition: ["Web-разработчик"],
+        companyName: "ТОО \"Асмас\"",
+        companyURL: "https://asmas.kz/",
+        about: "Разработка и создание веб-сайтов, мобильные приложений, а также техническая поддержка и обслуживание информационных систем",
+        skills: ["React.JS", "PostgreSQL", "JavaScript", "Linux", "Nginx", "Figma", "HTML5", "CSS3", "Flexbox"]
     }].reverse()
 };
 
@@ -34,11 +41,6 @@ const jobSlice = createSlice({
     name: 'application',
     initialState,
     reducers: {},
-    extraReducers: (builder) => {
-        builder.addCase(fetchCategories.fulfilled, (state, {payload}) => {
-            state.categories = payload;
-        });
-    }
 });
 
 export default jobSlice.reducer;
