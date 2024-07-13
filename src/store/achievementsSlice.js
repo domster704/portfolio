@@ -4,9 +4,9 @@ import CP_PDF from '../assets/docs/CP.pdf';
 import ITS_PDF from '../assets/docs/ITS.pdf';
 import KM_PDF from '../assets/docs/KM.pdf';
 
-import ITS from '../assets/image/certificate/ITS.png';
-import CP from '../assets/image/certificate/CP.png';
-import KM from '../assets/image/certificate/KM.png';
+import ITS from '../assets/image/certificate/ITS.webp';
+import CP from '../assets/image/certificate/CP.webp';
+import KM from '../assets/image/certificate/KM.webp';
 
 const initialState = {
     list: [{

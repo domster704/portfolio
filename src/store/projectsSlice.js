@@ -1,15 +1,15 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-import PP from '../assets/image/project/PP.png'
-import berest from '../assets/image/project/berest.jpg'
-import MARS_app from '../assets/image/project/MARS_app.png'
-import fillWordQT from '../assets/image/project/fillWordQT.png'
-import YandexGoTest from '../assets/image/project/YandexGoTest.png'
-import siteSQB from '../assets/image/project/siteSQB.png'
-import RehabCenter from '../assets/image/project/RehabCenter.png'
-import LCT from '../assets/image/project/LCT.png'
-import PBS from '../assets/image/project/PBS.png'
-import tu from '../assets/image/project/tu.png'
+import PP from '../assets/image/project/PP.webp'
+import berest from '../assets/image/project/berest.webp'
+import MARS_app from '../assets/image/project/MARS_app.webp'
+import fillWordQT from '../assets/image/project/fillWordQT.webp'
+import YandexGoTest from '../assets/image/project/YandexGoTest.webp'
+import siteSQB from '../assets/image/project/siteSQB.webp'
+import RehabCenter from '../assets/image/project/RehabCenter.webp'
+import LCT from '../assets/image/project/LCT.webp'
+import PBS from '../assets/image/project/PBS.webp'
+import tu from '../assets/image/project/tu.webp'
 
 const initialState = {
     list: [{
