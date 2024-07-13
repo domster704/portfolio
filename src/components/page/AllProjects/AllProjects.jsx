@@ -1,14 +1,13 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import * as style from './AllProjects.module.css'
 
 import backSvg from "../../../assets/image/svg/back.svg"
 import {Link} from "react-router-dom";
 import ProjectRow from "./ProjectRow/ProjectRow";
 
-const AllProjects = (props) => {
+const AllProjects = () => {
     const projectsRows = useSelector(state => state.projectsRowsSlice);
-    const dispatch = useDispatch();
 
     React.useEffect(() => {
         window.scrollTo(0, 0);

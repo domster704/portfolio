@@ -1,5 +1,4 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
 import * as styleAllProject from '../AllProjects.module.css'
 import * as styleJob from '../../Resume/Main/ListElement/ListElement.module.css'
 
@@ -8,9 +7,6 @@ import linkBlue from '../../../../assets/image/svg/link_blue.svg'
 import link from '../../../../assets/image/svg/link.svg'
 
 const ProjectRow = ({project}) => {
-    const data = useSelector(state => state.data);
-    const dispatch = useDispatch();
-
     return (
         <div className={styleAllProject.row}>
             <div className={styleAllProject.col1}>{project.year}</div>
@@ -27,7 +23,7 @@ const ProjectRow = ({project}) => {
             <div className={styleAllProject.col4}>
                 {
                     project.skills.map((skill, index) => {
-                        return <div className={styleJob.skill}>{skill}</div>
+                        return <div key={index} className={styleJob.skill}>{skill}</div>
                     })
                 }
             </div>

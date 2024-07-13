@@ -1,6 +1,6 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
 import * as style from './Header.module.css'
+import * as styleMain from '../Main/Main.module.css'
 
 import githubLogo from '../../../../assets/image/svg/github.svg';
 import mailLogo from '../../../../assets/image/svg/mail.svg';
@@ -42,9 +42,37 @@ export const SocialNetwork = ({isMobile = false}) => {
     )
 }
 
-const Header = (props) => {
-    const data = useSelector(state => state.data);
-    const dispatch = useDispatch();
+const Header = () => {
+    React.useEffect(() => {
+        const headerListElem = document.getElementsByClassName(style.blockLinkList_element);
+        for (let i of headerListElem) {
+            i.addEventListener('click', () => {
+                goToElement(i, i.id);
+            });
+        }
+
+        /**
+         * Scrolls to a specific element, highlights a line, and removes the highlight from other lines.
+         * @param {HTMLElement} line - The line element to highlight.
+         * @param {string} elementStr - The class name of the element to scroll to.
+         */
+        function goToElement(line, elementStr) {
+            let elem = document.querySelector(`.${elementStr}`)
+            elem.scrollIntoView({
+                behavior: "smooth",
+            })
+
+            // Remove highlight from other lines
+            let listOfChosenItems = document.getElementsByClassName(style.blockLinkList_element);
+            for (let i of listOfChosenItems) {
+                i.classList.remove(style.active);
+            }
+
+            // Highlight the current line
+            line.classList.add(style.active);
+        }
+    }, [])
+
 
     return (
         <header className={style.headerBlock}>
@@ -52,15 +80,15 @@ const Header = (props) => {
             <h3 className={style.subHeader}>Full-stack developer</h3>
             <p className={style.description}>Разработка сайтов, мобильных приложений, кроссплатформенных решений</p>
             <div className={style.blockLinkList}>
-                <div className={`${style.blockLinkList_element} ${style.active}`} id="main-about">
+                <div className={`${style.blockLinkList_element} ${style.active}`} id={styleMain.about}>
                     <span className={style.blockLinkList_element_line}></span>
                     <p className={style.blockLinkList_element_text}>О себе</p>
                 </div>
-                <div className={style.blockLinkList_element} id="main-job-place-list">
+                <div className={style.blockLinkList_element} id={styleMain.jobsList}>
                     <span className={style.blockLinkList_element_line}></span>
                     <p className={style.blockLinkList_element_text}>Опыт</p>
                 </div>
-                <div className={style.blockLinkList_element} id="main-project-list">
+                <div className={style.blockLinkList_element} id={styleMain.projectsList}>
                     <span className={style.blockLinkList_element_line}></span>
                     <p className={style.blockLinkList_element_text}>Проекты</p>
                 </div>

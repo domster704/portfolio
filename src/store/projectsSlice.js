@@ -95,5 +95,5 @@ export const projectsSlice = createSlice({
     }
 });
 
-export const {setText} = projectsSlice.actions;
+export const {} = projectsSlice.actions;
 export default projectsSlice.reducer;

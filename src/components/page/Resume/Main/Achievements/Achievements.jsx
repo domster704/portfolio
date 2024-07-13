@@ -88,7 +88,7 @@ const AchievementsList = ({
     );
 }
 
-const Achievements = (props) => {
+const Achievements = () => {
     const sliderBlockRef = React.useRef(null);
     const sliderBlockArrowBackRef = React.useRef(null);
     const sliderBlockArrowNextRef = React.useRef(null);
