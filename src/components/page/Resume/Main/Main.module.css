@@ -98,79 +98,7 @@ div[class^=mobile] {
 }
 
 
-.achievements {
-    display: flex;
-    color: black;
-    margin-top: 3rem;
-    justify-content: center;
-}
 
-.achievementsArrow {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.achievementImgBlock img {
-    width: 15rem;
-    height: auto;
-    aspect-ratio: 12 / 17;
-    filter: brightness(75%);
-    cursor: pointer;
-}
-
-.achievementImgBlock img:hover {
-    filter: brightness(100%);
-}
-
-.achievementsArrow div {
-    --arrow-width: 3rem;
-    margin: 0 1vw;
-    width: var(--arrow-width);
-    height: var(--arrow-width);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.achievementsArrow:hover div {
-    --scaling-width: 0.4rem;
-    margin: 0 calc(1vw - var(--scaling-width) / 2);
-    width: calc(var(--arrow-width) + var(--scaling-width));
-    height: calc(var(--arrow-width) + var(--scaling-width));
-}
-
-.achievementImgBlock.active {
-    display: block !important;
-    animation-duration: .3s;
-    animation-timing-function: ease-in-out;
-}
-
-.achievementImgBlock {
-    display: none;
-}
-
-.achievementsImgBlockList {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 1024px) {
-    .achievementImgBlock img {
-        filter: brightness(100%);
-    }
-
-    .achievements {
-        margin-right: unset;
-    }
-
-    .achievementsImgBlockList {
-        width: 100%;
-    }
-}
 
 @media (max-width: 1024px) {
     .main {

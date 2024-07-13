@@ -1,7 +1,7 @@
 import React from 'react';
-import * as style from '../JobElement/JobElement.module.css'
+import * as style from './ListElement.module.css'
 
-const ProjectElement = ({project}) => {
+const Project = ({project}) => {
     return (
         <div className={style.element}>
             <div className={`${style.elementHeader} ${style.elementHeaderImageDesktop}`}>
@@ -52,4 +52,4 @@ const ProjectElement = ({project}) => {
     );
 }
 
-export default ProjectElement;
+export default Project;

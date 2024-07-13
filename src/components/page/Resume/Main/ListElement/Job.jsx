@@ -1,11 +1,10 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import * as style from './JobElement.module.css'
+import * as style from './ListElement.module.css'
 
 import link from '../../../../../assets/image/svg/link.svg'
 import linkBlue from '../../../../../assets/image/svg/link_blue.svg'
 
-const JobElement = ({job}) => {
+const Job = ({job}) => {
     return (
         <a href={job.companyURL} target="blank">
             <div className={style.element}>
@@ -49,4 +48,4 @@ const JobElement = ({job}) => {
     );
 }
 
-export default JobElement;
+export default Job;

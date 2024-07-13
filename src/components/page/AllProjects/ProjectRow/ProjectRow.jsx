@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import * as styleAllProject from '../AllProjects.module.css'
-import * as styleJob from '../../Resume/Main/JobElement/JobElement.module.css'
+import * as styleJob from '../../Resume/Main/ListElement/ListElement.module.css'
 
 import linkGray from '../../../../assets/image/svg/link_gray.svg'
 import linkBlue from '../../../../assets/image/svg/link_blue.svg'
