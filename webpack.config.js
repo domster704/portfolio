@@ -11,7 +11,7 @@ module.exports = {
         filename: "main.bundle.js",
         clean: {
             keep(asset) {
-                return 'index.html' || 'resume.ico';
+                return 'index.html' || 'resume.ico' || 'favicon.svg';
             }
         }
     },
