@@ -4,8 +4,6 @@ import * as style from './Main.module.css'
 
 import next from '../../../../assets/image/svg/next.svg';
 
-import resumePDF from '../../../../assets/docs/resume.pdf';
-
 import {SocialNetwork} from "../Header/Header";
 import Job from "./ListElement/Job";
 import Project from "./ListElement/Project";
@@ -80,7 +78,7 @@ const Main = () => {
             <div>
                 <div className="mobile-exp">Опыт</div>
                 <div className={style.jobsList}>
-                    <a href={resumePDF} target="_blank">
+                    <a href='https://portfolio.ln-kr.ru/data/docs/resume.pdf' target="_blank">
                         <div className={style.viewFullResume}>
                             <p>Полное резюме</p>
                             <img src={next} alt=""/>
