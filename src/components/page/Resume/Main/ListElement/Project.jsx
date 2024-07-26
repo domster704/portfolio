@@ -7,7 +7,10 @@ const Project = ({project}) => {
             <div className={`${style.elementHeader} ${style.elementHeaderImageDesktop}`}>
                 <div className={style.imageBlock}>
                     <a href={project.image_full} target="blank">
-                        <img className={style.image} src={project.image} alt=""/>
+                        <img className={style.image}
+                             src={project.image}
+                             alt=""
+                             loading='lazy'/>
                     </a>
                 </div>
             </div>
@@ -36,7 +39,10 @@ const Project = ({project}) => {
                 {/*Мобильное отображение фотографии*/}
                 <div className={`${style.elementHeader} ${style.imageMobile}`}>
                     <div className={style.imageBlock}>
-                        <img className={style.image} src={project.image} alt=""/>
+                        <img className={style.image}
+                             src={project.image}
+                             alt=""
+                             loading='lazy'/>
                     </div>
                 </div>
             </a>

@@ -78,8 +78,9 @@ const AchievementsList = ({
                     return (
                         <div key={index}
                              className={`${style.achievementImgBlock} ${el.isActive && style.active}`}>
-                            <a href={el.pdf} target="_blank"><img
-                                src={el.png} alt=""/></a>
+                            <a href={el.pdf} target="_blank">
+                                <img src={el.png} alt="" loading='lazy'/>
+                            </a>
                         </div>
                     )
                 })
