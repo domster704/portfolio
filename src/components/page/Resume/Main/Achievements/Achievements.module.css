@@ -15,7 +15,7 @@
 .achievementImgBlock img {
     width: 15rem;
     height: auto;
-    aspect-ratio: 12 / 17;
+    aspect-ratio: 240 / 339;
     filter: brightness(75%);
     cursor: pointer;
 }

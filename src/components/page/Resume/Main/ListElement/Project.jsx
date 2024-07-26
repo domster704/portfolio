@@ -6,7 +6,7 @@ const Project = ({project}) => {
         <div className={style.element}>
             <div className={`${style.elementHeader} ${style.elementHeaderImageDesktop}`}>
                 <div className={style.imageBlock}>
-                    <a href={project.image} target="blank">
+                    <a href={project.image_full} target="blank">
                         <img className={style.image} src={project.image} alt=""/>
                     </a>
                 </div>

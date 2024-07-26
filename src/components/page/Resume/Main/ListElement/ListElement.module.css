@@ -106,7 +106,7 @@
 
 .imageBlock {
     --image-width: 7.5rem;
-    --image-height: 4.32813rem;
+    --image-height: 4.5rem;
     --border-width: 0.125rem;
     width: calc(var(--image-width) + var(--border-width) * 2);
     height: calc(var(--image-height) + var(--border-width) * 2);

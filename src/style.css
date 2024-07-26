@@ -49,6 +49,12 @@ a {
     text-decoration: none;
 }
 
+@media (min-width: 1600px) {
+    html {
+        font-size: max(1em, 1vw);
+    }
+}
+
 @media (max-width: 1024px) {
     :root {
         --main-padding: 1.5rem !important;
