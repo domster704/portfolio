@@ -11,19 +11,11 @@ const Project = ({project}) => {
                     </a>
                 </div>
             </div>
-            <a href={project.projectURL} target="blank">
+            <a href={project.links?.find(element => element?.main === true)?.link} target="blank">
                 <div>
                     <div className={style.specialization}>
                         <div className={style.elementBlockHeader}>
-                            <div>{project.projectName}</div>
-                            <div>
-                                {
-                                    project.subPosition.map((pos, index) =>
-                                        <div key={index}>
-                                            {pos}
-                                        </div>)
-                                }
-                            </div>
+                            <div>{project.name}</div>
                         </div>
                     </div>
                     <div className={style.specializationAbout}>

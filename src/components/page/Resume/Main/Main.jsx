@@ -104,6 +104,9 @@ const Main = () => {
                     </Link>
                     {
                         projects.list.map((project, index) => {
+                            if (!project.active) {
+                                return;
+                            }
                             return <Project key={index} project={project}/>
                         })
                     }

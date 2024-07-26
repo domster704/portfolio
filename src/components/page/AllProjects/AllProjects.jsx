@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 import ProjectRow from "./ProjectRow/ProjectRow";
 
 const AllProjects = () => {
-    const projectsRows = useSelector(state => state.projectsRowsSlice);
+    const projects = useSelector(state => state.projects);
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -33,7 +33,7 @@ const AllProjects = () => {
                     <p className={style.col5}>Ссылки</p>
                 </div>
                 {
-                    projectsRows.list.map((item, index) => {
+                    projects.list.map((item, index) => {
                         return <ProjectRow key={index} project={item}/>
                     })
                 }
