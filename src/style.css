@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Murecho";
-    src: url("assets/font/Murecho/Murecho-VariableFont_wght.ttf") format('truetype');
+    src: url("assets/font/Murecho/Murecho-VariableFont_wght.woff2") format('truetype');
 }
 
 *, *:after, *:before {
