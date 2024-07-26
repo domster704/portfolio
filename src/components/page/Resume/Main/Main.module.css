@@ -34,7 +34,7 @@
 
 .about a {
     text-decoration: none;
-    color: #E2E8F0;
+    color: var(--text-color);
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.625rem;
@@ -59,7 +59,7 @@
 
 .viewFullResume {
     display: flex;
-    color: #E2E8F0;
+    color: var(--text-color);
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.25rem;
@@ -89,7 +89,7 @@
 
 div[class^=mobile] {
     display: none;
-    color: #E2E8F0;
+    color: var(--text-color);
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.75rem;

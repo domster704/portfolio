@@ -33,7 +33,7 @@
 }
 
 .elementHeader {
-    color: #64748B;
+    color: var(--gray-color);
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.01875rem;
@@ -46,7 +46,7 @@
 .elementBlockUnderHeader {
     display: flex;
     flex-direction: column;
-    color: #64748B;
+    color: var(--gray-color);
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.25rem;
@@ -59,7 +59,7 @@
 }
 
 .elementBlockHeader > div {
-    color: #E2E8F0;
+    color: var(--text-color);
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.25rem;

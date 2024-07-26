@@ -14,6 +14,9 @@
 :root {
     --block-width: 33rem;
     --main-padding: calc((100vw - 2 * var(--block-width)) / 2);
+
+    --gray-color: #8997ab;
+    --text-color: #E2E8F0;
 }
 
 html::-webkit-scrollbar {
@@ -23,7 +26,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-    background-color: #E2E8F0;
+    background-color: var(--text-color);
     border-radius: 0.5vw;
 }
 

@@ -46,7 +46,7 @@
 }
 
 .header {
-    color: #E2E8F0;
+    color: var(--text-color);
     font-size: 3rem;
     font-weight: 700;
     line-height: 3rem;
@@ -61,7 +61,7 @@
 }
 
 .tableHeader > *[class^=col] {
-    color: #E2E8F0;
+    color: var(--text-color);
 }
 
 .row {
@@ -93,7 +93,7 @@
 .col2 {
     min-width: calc(30% - var(--gap));
 
-    color: #E2E8F0;
+    color: var(--text-color);
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.375rem;
