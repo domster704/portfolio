@@ -1,16 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-import PP from '../assets/image/project/full/PP.webp'
-import berest from '../assets/image/project/full/berest.webp'
-import MARS_app from '../assets/image/project/full/MARS_app.webp'
-import fillWordQT from '../assets/image/project/full/fillWordQT.webp'
-import YandexGoTest from '../assets/image/project/full/YandexGoTest.webp'
-import siteSQB from '../assets/image/project/full/siteSQB.webp'
-import RehabCenter from '../assets/image/project/full/RehabCenter.webp'
-import LCT from '../assets/image/project/full/LCT.webp'
-import PBS from '../assets/image/project/full/PBS.webp'
-import tu from '../assets/image/project/full/tu.webp'
-
 import PP_s from '../assets/image/project/compressed/PP_s.webp'
 import berest_s from '../assets/image/project/compressed/berest_s.webp'
 import MARS_app_s from '../assets/image/project/compressed/MARS_app_s.webp'
@@ -26,7 +15,7 @@ const initialState = {
     list: [{
         active: true,
         image: tu_s,
-        image_full: tu,
+        image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/tu.webp',
 
         name: "Tayelsizdik-urpaktary",
         about: "С 2021 года, по инициативе Президента Касым-Жомарта Кемелевича Токаева ежегодно на конкурсной основе для молодежи присуждается грант «Тәуелсіздік ұрпақтары».",
@@ -48,7 +37,7 @@ const initialState = {
     }, {
         active: true,
         image: PP_s,
-        image_full: PP,
+        image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/PP.webp',
 
         name: "ГК \"Проектная ПРАКТИКА\"",
         about: "ГК \"Проектная ПРАКТИКА\". Комплексные решения управления проектами: консалтинг, автоматизация, обучение, аутсорсинг проектных офисов.",
@@ -67,7 +56,7 @@ const initialState = {
     }, {
         active: true,
         image: berest_s,
-        image_full: berest,
+        image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/berest.webp',
 
         name: "Сайт для \"Берест\"",
         about: "Интернет-магазин для компании ООО «БЕРЕСТ» по продаже каркасных домов.",
@@ -83,7 +72,7 @@ const initialState = {
     }, {
         active: true,
         image: MARS_app_s,
-        image_full: MARS_app,
+        image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/MARS_app.webp',
 
         name: "Онлайн-магазин на Android",
         about: "Онлайн-магазин для ограниченного круга лиц в сфере косметики и парфюмерии, написанный на Java с помощью AndroidAPI.",
@@ -99,7 +88,7 @@ const initialState = {
     }, {
         active: true,
         image: fillWordQT_s,
-        image_full: fillWordQT,
+        image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/fillWordQT.webp',
 
         name: "Филлворд на QT",
         about: "Приложения для визуализации филворда для помощи ученикам школ и других образовательных учреждений в изучении слов английского языка разной сложности.",
@@ -115,7 +104,7 @@ const initialState = {
     }, {
         active: true,
         image: YandexGoTest_s,
-        image_full: YandexGoTest,
+        image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/YandexGoTest.webp',
 
         name: "Тестовое задание для YandexGo",
         about: "Тестовое задание в виде верстки для Yandex Crowd",
@@ -137,7 +126,7 @@ const initialState = {
     }, {
         active: true,
         image: siteSQB_s,
-        image_full: siteSQB,
+        image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/siteSQB.webp',
 
         name: "Кредит онлайн на карту",
         about: "Веб-страница для компании, занимающейся кредитами.",
@@ -158,7 +147,7 @@ const initialState = {
     }, {
         active: true,
         image: RehabCenter_s,
-        image_full: RehabCenter,
+        image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/RehabCenter.webp',
 
         name: "Реабилитационный центр",
         about: "Веб-страница для реабилитационного центра.",
@@ -180,7 +169,7 @@ const initialState = {
     }, {
         active: true,
         image: PBS_s,
-        image_full: PBS,
+        image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/PBS.webp',
 
         name: "PolarBearSearch",
         about: "Приложение по поиску белых медведей в Арктике по снимкам с самолёта.",
@@ -201,7 +190,7 @@ const initialState = {
         target: "Цифровой прорыв",
     }, {
         image: LCT_s,
-        image_full: LCT,
+        image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/LCT.webp',
 
         name: "Расчет стоимости недвижимости",
         about: "Сервис автоматизирует процесс расчета стоимости квартир и позволяет ускорить процедуру выдачи экспертных заключений о стоимости квартир и избежать сделок, при которых имущество продается по цене ниже рыночной.",
