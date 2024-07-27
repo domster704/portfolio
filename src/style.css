@@ -12,7 +12,7 @@
 }
 
 :root {
-    --block-width: 33rem;
+    --block-width: 33em;
     --main-padding: calc((100vw - 2 * var(--block-width)) / 2);
 
     --gray-color: #8997ab;
@@ -20,7 +20,7 @@
     --light-gray: #94A3B8;
 
     @media (max-width: 1024px) {
-        --main-padding: 1.5rem !important;
+        --main-padding: 1.5em !important;
     }
 
     @media (max-width: 1200px) {

@@ -1,20 +1,22 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-import PP_s from '../assets/image/project/compressed/PP_s.webp'
-import berest_s from '../assets/image/project/compressed/berest_s.webp'
-import MARS_app_s from '../assets/image/project/compressed/MARS_app_s.webp'
-import fillWordQT_s from '../assets/image/project/compressed/fillWordQT_s.webp'
-import YandexGoTest_s from '../assets/image/project/compressed/YandexGoTest_s.webp'
-import siteSQB_s from '../assets/image/project/compressed/siteSQB_s.webp'
-import RehabCenter_s from '../assets/image/project/compressed/RehabCenter_s.webp'
-import LCT_s from '../assets/image/project/compressed/LCT_s.webp'
-import PBS_s from '../assets/image/project/compressed/PBS_s.webp'
-import tu_s from '../assets/image/project/compressed/tu_s.webp'
+import PP from '../assets/image/project/compressed/PP.webp'
+import berest from '../assets/image/project/compressed/berest.webp'
+import MARS_app from '../assets/image/project/compressed/MARS_app.webp'
+import fillWordQT from '../assets/image/project/compressed/fillWordQT.webp'
+import YandexGoTest from '../assets/image/project/compressed/YandexGoTest.webp'
+import siteSQB from '../assets/image/project/compressed/siteSQB.webp'
+import RehabCenter from '../assets/image/project/compressed/RehabCenter.webp'
+import LCT from '../assets/image/project/compressed/LCT.webp'
+import PBS from '../assets/image/project/compressed/PBS.webp'
+import tu from '../assets/image/project/compressed/tu.webp'
+
+// https://www.simpleimageresizer.com/resize/webp
 
 const initialState = {
     list: [{
         active: true,
-        image: tu_s,
+        image: tu,
         image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/tu.webp',
 
         name: "Tayelsizdik-urpaktary",
@@ -36,7 +38,7 @@ const initialState = {
         target: "Министерство информации и общественного развития Казахстана",
     }, {
         active: true,
-        image: PP_s,
+        image: PP,
         image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/PP.webp',
 
         name: "ГК \"Проектная ПРАКТИКА\"",
@@ -55,7 +57,7 @@ const initialState = {
         target: "ГК \"Проектная ПРАКТИКА\"",
     }, {
         active: true,
-        image: berest_s,
+        image: berest,
         image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/berest.webp',
 
         name: "Сайт для \"Берест\"",
@@ -71,7 +73,7 @@ const initialState = {
         target: "ООО «БЕРЕСТ»",
     }, {
         active: true,
-        image: MARS_app_s,
+        image: MARS_app,
         image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/MARS_app.webp',
 
         name: "Онлайн-магазин на Android",
@@ -87,7 +89,7 @@ const initialState = {
         target: "ООО Янтарь+",
     }, {
         active: true,
-        image: fillWordQT_s,
+        image: fillWordQT,
         image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/fillWordQT.webp',
 
         name: "Филлворд на QT",
@@ -103,7 +105,7 @@ const initialState = {
         target: "НИТУ МИСИС",
     }, {
         active: true,
-        image: YandexGoTest_s,
+        image: YandexGoTest,
         image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/YandexGoTest.webp',
 
         name: "Тестовое задание для YandexGo",
@@ -125,7 +127,7 @@ const initialState = {
         target: "ООО \"ЯНДЕКС КРАУД\"",
     }, {
         active: true,
-        image: siteSQB_s,
+        image: siteSQB,
         image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/siteSQB.webp',
 
         name: "Кредит онлайн на карту",
@@ -146,7 +148,7 @@ const initialState = {
         target: "ITConstruct",
     }, {
         active: true,
-        image: RehabCenter_s,
+        image: RehabCenter,
         image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/RehabCenter.webp',
 
         name: "Реабилитационный центр",
@@ -168,7 +170,7 @@ const initialState = {
         target: "ITConstruct",
     }, {
         active: true,
-        image: PBS_s,
+        image: PBS,
         image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/PBS.webp',
 
         name: "PolarBearSearch",
@@ -189,7 +191,7 @@ const initialState = {
         year: 2021,
         target: "Цифровой прорыв",
     }, {
-        image: LCT_s,
+        image: LCT,
         image_full: 'https://portfolio.ln-kr.ru/data/image/project/full/LCT.webp',
 
         name: "Расчет стоимости недвижимости",

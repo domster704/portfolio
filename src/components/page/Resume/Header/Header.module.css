@@ -7,6 +7,13 @@
     align-items: flex-end;
     align-self: stretch;
     height: 100%;
+
+    @media (max-width: 1024px) {
+        position: relative;
+        width: 100%;
+        height: min-content;
+        padding-bottom: 0;
+    }
 }
 
 .header {
@@ -36,6 +43,10 @@
 
 .blockLinkList {
     margin-top: 4vw;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 .blockLinkList_element {
@@ -45,22 +56,42 @@
     gap: 1rem;
     user-select: none;
     max-width: max-content;
-}
 
-.blockLinkList_element.active > .blockLinkList_element_line {
-    width: 4rem;
-    background: var(--text-color);
-}
+    .blockLinkList_element_line {
+        width: 2rem;
+        height: 0.1rem;
+        background: #475569;
+        transition: all .2s ease;
+    }
 
-.blockLinkList_element:hover {
-    cursor: pointer;
-}
+    .blockLinkList_element_text {
+        color: var(--gray-color);
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1rem;
+        letter-spacing: 0.075rem;
+        text-transform: uppercase;
+    }
 
-.blockLinkList_element:not(.active):hover > .blockLinkList_element_line {
-    width: 4rem;
-    background: var(--text-color);
-    animation-duration: .5s;
-    animation-name: hover-header-list-element;
+    &.active > .blockLinkList_element_line {
+        width: 4rem;
+        background: var(--text-color);
+    }
+
+    &.active > .blockLinkList_element_text {
+        color: var(--text-color);
+    }
+
+    &:not(.active):hover > .blockLinkList_element_line {
+        width: 4rem;
+        background: var(--text-color);
+        animation-duration: .5s;
+        animation-name: hover-header-list-element;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 @keyframes hover-header-list-element {
@@ -73,26 +104,6 @@
         width: 4rem;
         background: var(--text-color);
     }
-}
-
-.blockLinkList_element_line {
-    width: 2rem;
-    height: 0.1rem;
-    background: #475569;
-    transition: all .2s ease;
-}
-
-.blockLinkList_element_text {
-    color: var(--gray-color);
-    font-size: 0.75rem;
-    font-weight: 700;
-    line-height: 1rem;
-    letter-spacing: 0.075rem;
-    text-transform: uppercase;
-}
-
-.blockLinkList_element.active > .blockLinkList_element_text {
-    color: var(--text-color);
 }
 
 .socialNetworks {
@@ -116,25 +127,14 @@
 
 .iconsMobile {
     display: none;
+
+    @media (max-width: 1024px) {
+        display: flex;
+    }
 }
 
 @media (max-width: 1024px) {
-    .headerBlock {
-        position: relative;
-        width: 100%;
-        height: min-content;
-        padding-bottom: 0;
-    }
-
-    .blockLinkList {
-        display: none;
-    }
-
     .iconsDesktop {
         display: none;
-    }
-
-    .iconsMobile {
-        display: flex;
     }
 }

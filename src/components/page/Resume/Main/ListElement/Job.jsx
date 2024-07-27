@@ -14,13 +14,18 @@ const Job = ({job}) => {
                         <div className={style.elementBlockHeader}>
                             <div>{job.position}&nbsp;·&nbsp;</div>
                             <div>{job.companyName}</div>
-                            <div className={style.elementBlockHeader_linkDefault}><img
-                                className={style.elementBlockHeader_link}
-                                src={link} alt=""
-                            /></div>
-                            <div className={style.elementBlockHeader_linkHover}><img
-                                className={style.elementBlockHeader_link}
-                                src={linkBlue} alt=""/></div>
+                            <div className={style.elementBlockHeader_linkDefault}>
+                                <img
+                                    className={style.elementBlockHeader_link}
+                                    src={link}
+                                    alt=""/>
+                            </div>
+                            <div className={style.elementBlockHeader_linkHover}>
+                                <img
+                                    className={style.elementBlockHeader_link}
+                                    src={linkBlue}
+                                    alt=""/>
+                            </div>
                         </div>
                         <div className={style.elementBlockUnderHeader}>
                             {

@@ -1,88 +1,100 @@
 .element {
     display: flex;
-    gap: 2.5rem;
-    padding: 1rem;
+    gap: 2.5em;
+    padding: 1em;
     width: var(--block-width);
-    border-radius: 0.5rem;
+    border-radius: 0.5em;
     border: 1px solid rgba(0, 0, 0, 0);
-}
 
-.element:hover {
-    background-color: rgba(23, 38, 73, 0.5);
-    border: 1px solid rgba(23, 38, 73, 1);
-    box-shadow: 0 0.05rem 0.1rem 0 rgb(23, 38, 73);
-    cursor: pointer;
+    &:hover {
+        background-color: rgba(23, 38, 73, 0.5);
+        border: 1px solid rgba(23, 38, 73, 1);
+        box-shadow: 0 0.05em 0.1em 0 rgb(23, 38, 73);
+        cursor: pointer;
+
+        /*TODO: использовать filter для смены цвета*/
+
+        .elementBlockHeader_linkDefault > .elementBlockHeader_link {
+            display: none;
+        }
+
+        /*TODO: сделать через animation*/
+
+        .elementBlockHeader_linkHover {
+            display: block;
+            transform: translateX(0.3em) translateY(-0.3em);
+        }
+
+        .elementBlockHeader > div {
+            color: #5EEAD4;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        padding: 1em 0;
+    }
+
+    @media (max-width: 600px) {
+        display: block;
+    }
 }
 
 .elementBlockHeader_linkHover {
     display: none;
 }
 
-.element:hover .elementBlockHeader_linkDefault > .elementBlockHeader_link {
-    display: none;
-}
-
-/*TODO: сделать через animation*/
-.element:hover .elementBlockHeader_linkHover {
-    display: block;
-    transform: translateX(0.3rem) translateY(-0.3rem);
-}
-
-.element:hover .elementBlockHeader > div {
-    color: #5EEAD4;
+.elementBlockHeader_link {
+    background-size: contain;
 }
 
 .elementHeader {
     color: var(--gray-color);
-    font-size: 0.75rem;
+    font-size: 0.75em;
     font-weight: 600;
-    letter-spacing: 0.01875rem;
+    letter-spacing: 0.01875em;
     text-transform: uppercase;
-    line-height: 1.45rem;
-    align-self: start;
-    min-width: 7.75rem;
+    line-height: 1.45em;
+
+    min-width: 7.75em;
+
+    @media (max-width: 600px) {
+        margin-bottom: 0.5em;
+    }
 }
+
 
 .elementBlockUnderHeader {
     display: flex;
     flex-direction: column;
     color: var(--gray-color);
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 500;
-    line-height: 1.25rem;
+    line-height: 1.25em;
 }
 
 .elementBlockHeader {
     display: flex;
     flex-direction: row;
     position: relative;
-}
 
-.elementBlockHeader > div {
-    color: var(--text-color);
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.25rem;
-}
-
-.elementBlockHeader_link {
-    background-size: contain;
-}
-
-.jobsList > a, .projectsList > a {
-    text-decoration: none;
-    text-decoration-color: transparent;
+    & > div {
+        color: var(--text-color);
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 1.25em;
+    }
 }
 
 .specialization {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
 }
 
 .specializationAbout {
     color: var(--light-gray);
-    font-size: 0.875rem;
-    line-height: 1.3125rem;
-    margin-bottom: 1rem;
+    font-size: 0.875em;
+    line-height: 1.3125em;
+    margin-bottom: 1em;
 }
 
 .skillsList {
@@ -91,72 +103,56 @@
 
 .skill {
     display: inline-block;
-    padding: 0.1875rem 0.78125rem 0.3125rem 0.75rem;
+    padding: 0.1875em 0.78125em 0.3125em 0.75em;
     align-items: center;
-    border-radius: 624.9375rem;
+    border-radius: 624.9375em;
     background: rgba(45, 212, 191, 0.10);
-    margin-bottom: 0.37rem;
-    margin-right: 0.37rem;
+    margin-bottom: 0.37em;
+    margin-right: 0.37em;
 
     color: #5EEAD4;
-    font-size: 0.75rem;
+    font-size: 0.75em;
     font-weight: 500;
-    line-height: 1.25rem;
+    line-height: 1.25em;
 }
 
 .imageBlock {
-    --image-width: 7.5rem;
-    --image-height: 4.5rem;
-    --border-width: 0.125rem;
-    width: calc(var(--image-width) + var(--border-width) * 2);
-    height: calc(var(--image-height) + var(--border-width) * 2);
-    border-radius: 0.25rem;
+    --image-width: 9em;
+    --border-width: 0.125em;
+
+    width: var(--image-width);
+
+    border-radius: 0.25em;
     border: var(--border-width) solid rgba(226, 232, 240, 0.10);
+
     align-content: center;
     align-items: center;
     text-align: center;
-}
 
-.image {
-    width: var(--image-width);
-    height: var(--image-height);
-    border-radius: var(--border-width);
+    @media (max-width: 600px) {
+        --image-width: clamp(15em, 100%, 30em);
+        margin-top: 0.5em;
+    }
+
+    .image {
+        aspect-ratio: 5 / 3;
+
+        width: var(--image-width);
+        height: auto;
+        border-radius: var(--border-width);
+    }
 }
 
 .imageMobile {
     display: none;
-}
 
-@media (max-width: 1024px) {
-    .element {
-        width: 100%;
-        padding: 1rem 0;
+    @media (max-width: 600px) {
+        display: block;
     }
 }
 
 @media (max-width: 600px) {
-    .element {
-        display: block;
-    }
-
-    .jobsList .elementHeader {
-        margin-bottom: 0.5rem;
-    }
-
-    .mobile-projects .elementHeader {
-        margin-top: 1rem;
-    }
-
     .elementHeaderImageDesktop {
         display: none;
-    }
-
-    .imageMobile {
-        display: block;
-    }
-
-    .imageBlock {
-        --image-width: 13rem;
-        --image-height: calc(var(--image-width) / 7.5 * 4.32813);
     }
 }
