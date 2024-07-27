@@ -18,16 +18,31 @@
     --gray-color: #8997ab;
     --text-color: #E2E8F0;
     --light-gray: #94A3B8;
+
+    @media (max-width: 1024px) {
+        --main-padding: 1.5rem !important;
+    }
+
+    @media (max-width: 1200px) {
+        --main-padding: 8vw;
+        --block-width: calc((100vw - 2 * var(--main-padding)) / 2);
+    }
 }
 
-html::-webkit-scrollbar {
-    width: 0.75em;
-    background: #E2E8F030;
-}
+html {
+    &::-webkit-scrollbar {
+        width: 0.75em;
+        background: #E2E8F030;
+    }
 
-html::-webkit-scrollbar-thumb {
-    background-color: var(--text-color);
-    border-radius: 0.5em;
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--text-color);
+        border-radius: 0.5em;
+    }
+
+    @media (min-width: 1600px) {
+        font-size: max(1em, 1vw);
+    }
 }
 
 body {
@@ -39,6 +54,11 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
+
+    @media (max-width: 1024px) {
+        display: none;
+        position: relative;
+    }
 }
 
 img {
@@ -50,28 +70,4 @@ img {
 a {
     text-decoration-color: transparent;
     text-decoration: none;
-}
-
-@media (min-width: 1600px) {
-    html {
-        font-size: max(1em, 1vw);
-    }
-}
-
-@media (max-width: 1024px) {
-    :root {
-        --main-padding: 1.5rem !important;
-    }
-
-    .spotlight {
-        display: none;
-        position: relative;
-    }
-}
-
-@media (max-width: 1200px) {
-    :root {
-        --main-padding: 8vw;
-        --block-width: calc((100vw - 2 * var(--main-padding)) / 2);
-    }
 }

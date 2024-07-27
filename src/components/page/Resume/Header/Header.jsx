@@ -51,24 +51,17 @@ const Header = () => {
             });
         }
 
-        /**
-         * Scrolls to a specific element, highlights a line, and removes the highlight from other lines.
-         * @param {HTMLElement} line - The line element to highlight.
-         * @param {string} elementStr - The class name of the element to scroll to.
-         */
         function goToElement(line, elementStr) {
             let elem = document.querySelector(`.${elementStr}`)
             elem.scrollIntoView({
                 behavior: "smooth",
             })
 
-            // Remove highlight from other lines
             let listOfChosenItems = document.getElementsByClassName(style.blockLinkList_element);
             for (let i of listOfChosenItems) {
                 i.classList.remove(style.active);
             }
 
-            // Highlight the current line
             line.classList.add(style.active);
         }
     }, [])
