@@ -25,12 +25,12 @@ const AllProjects = () => {
             </Link>
             <h1 className={style.header}>Все проекты</h1>
             <div className={style.table}>
-                <div className={`${style.row} ${style.tableHeader}`}>
-                    <p className={style.col1}>Год</p>
-                    <p className={style.col2}>Проект</p>
-                    <p className={style.col3}>Цель</p>
-                    <p className={style.col4}>Технологии</p>
-                    <p className={style.col5}>Ссылки</p>
+                <div className={`${style.row}`}>
+                    <p className={`${style.col1} ${style.tableHeader} `}>Год</p>
+                    <p className={`${style.col2} ${style.tableHeader} `}>Проект</p>
+                    <p className={`${style.col3} ${style.tableHeader} `}>Цель</p>
+                    <p className={`${style.col4} ${style.tableHeader} `}>Технологии</p>
+                    <p className={`${style.col5} ${style.tableHeader} `}>Ссылки</p>
                 </div>
                 {
                     projects.list.map((item, index) => {

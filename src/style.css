@@ -17,17 +17,17 @@
 
     --gray-color: #8997ab;
     --text-color: #E2E8F0;
+    --light-gray: #94A3B8;
 }
 
 html::-webkit-scrollbar {
-    width: 0.75vw;
+    width: 0.75em;
     background: #E2E8F030;
-    padding-right: 1rem;
 }
 
 html::-webkit-scrollbar-thumb {
     background-color: var(--text-color);
-    border-radius: 0.5vw;
+    border-radius: 0.5em;
 }
 
 body {

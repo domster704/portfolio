@@ -79,7 +79,7 @@
 }
 
 .specializationAbout {
-    color: #94A3B8;
+    color: var(--light-gray);
     font-size: 0.875rem;
     line-height: 1.3125rem;
     margin-bottom: 1rem;
