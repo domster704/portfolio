@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import * as style from './Achievements.module.css';
 
@@ -12,10 +12,10 @@ const AchievementsList = ({
                               sliderBlockArrowNextRef
                           }) => {
     const [currentSliderPosition, setCurrentSliderPosition] = React.useState(0);
-    const achievements = useSelector(state => state.achievements);
+    const achievementsStore = useSelector(state => state.achievements);
     const dispatch = useDispatch();
 
-    React.useEffect(() => {
+    useEffect(() => {
         let sliderBlock = sliderBlockRef.current;
         let sliderElements = Array.from(sliderBlock.children);
         let arrowBack = sliderBlockArrowBackRef.current;
@@ -48,8 +48,8 @@ const AchievementsList = ({
         }
     }, [currentSliderPosition]);
 
-    React.useEffect(() => {
-        achievements.list.forEach((el, index) => {
+    useEffect(() => {
+        achievementsStore.list.forEach((el, index) => {
             if (index === currentSliderPosition) {
                 if (el.isActive) {
                     return;
@@ -74,7 +74,7 @@ const AchievementsList = ({
     return (
         <div className={style.achievementsImgBlockList}>
             {
-                achievements.list.map((el, index) => {
+                achievementsStore.list.map((el, index) => {
                     return (
                         <div key={index}
                              className={`${style.achievementImgBlock} ${el.isActive && style.active}`}>

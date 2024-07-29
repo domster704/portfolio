@@ -2,7 +2,6 @@ import React from 'react';
 import * as style from './ListElement.module.css'
 
 import link from '../../../../../assets/image/svg/link.svg'
-import linkBlue from '../../../../../assets/image/svg/link_blue.svg'
 
 const Job = ({job}) => {
     return (
@@ -12,19 +11,14 @@ const Job = ({job}) => {
                 <div>
                     <div className={style.specialization}>
                         <div className={style.elementBlockHeader}>
-                            <div>{job.position}&nbsp;·&nbsp;</div>
-                            <div>{job.companyName}</div>
-                            <div className={style.elementBlockHeader_linkDefault}>
-                                <img
-                                    className={style.elementBlockHeader_link}
-                                    src={link}
-                                    alt=""/>
-                            </div>
-                            <div className={style.elementBlockHeader_linkHover}>
-                                <img
-                                    className={style.elementBlockHeader_link}
-                                    src={linkBlue}
-                                    alt=""/>
+                            <div>
+                                {job.position}&nbsp;·&nbsp;{job.companyName}
+                                <span className={style.elementBlockHeader_linkDefault}>
+                                    <img
+                                        className={style.elementBlockHeader_link}
+                                        src={link}
+                                        alt=""/>
+                                </span>
                             </div>
                         </div>
                         <div className={style.elementBlockUnderHeader}>

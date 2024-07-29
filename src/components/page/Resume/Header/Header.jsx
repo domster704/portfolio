@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import * as style from './Header.module.css'
 import * as styleMain from '../Main/Main.module.css'
 
@@ -39,11 +39,11 @@ export const SocialNetwork = ({isMobile = false}) => {
                 </div>
             </a>
         </div>
-    )
+    );
 }
 
 const Header = () => {
-    React.useEffect(() => {
+    useEffect(() => {
         const headerListElem = document.getElementsByClassName(style.blockLinkList_element);
         for (let i of headerListElem) {
             i.addEventListener('click', () => {
@@ -64,7 +64,7 @@ const Header = () => {
 
             line.classList.add(style.active);
         }
-    }, [])
+    }, []);
 
 
     return (

@@ -12,17 +12,10 @@
         box-shadow: 0 0.05em 0.1em 0 rgb(23, 38, 73);
         cursor: pointer;
 
-        /*TODO: использовать filter для смены цвета*/
-
-        .elementBlockHeader_linkDefault > .elementBlockHeader_link {
-            display: none;
-        }
-
-        /*TODO: сделать через animation*/
-
-        .elementBlockHeader_linkHover {
-            display: block;
+        .elementBlockHeader_linkDefault {
+            display: inline-block;
             transform: translateX(0.3em) translateY(-0.3em);
+            filter: brightness(0) saturate(100%) invert(84%) sepia(29%) saturate(786%) hue-rotate(109deg) brightness(100%) contrast(84%);
         }
 
         .elementBlockHeader > div {
@@ -33,10 +26,19 @@
     @media (max-width: 1024px) {
         width: 100%;
         padding: 1em 0;
+
+        display: grid;
+        grid-template-columns: 1fr 10fr;
     }
 
     @media (max-width: 600px) {
-        display: block;
+        display: flex;
+        gap: 1em;
+
+        &.element_mobile_reverse {
+            flex-direction: column-reverse;
+            gap: 0.5em;
+        }
     }
 }
 
@@ -93,8 +95,8 @@
 .specializationAbout {
     color: var(--light-gray);
     font-size: 0.875em;
-    line-height: 1.3125em;
-    margin-bottom: 1em;
+    line-height: 1.5em;
+    margin-bottom: 1.14em;
 }
 
 .skillsList {
@@ -111,13 +113,13 @@
     margin-right: 0.37em;
 
     color: #5EEAD4;
-    font-size: 0.75em;
+    font-size: 0.875em;
     font-weight: 500;
     line-height: 1.25em;
 }
 
 .imageBlock {
-    --image-width: 9em;
+    --image-width: 8em;
     --border-width: 0.125em;
 
     width: var(--image-width);
@@ -140,19 +142,5 @@
         width: var(--image-width);
         height: auto;
         border-radius: var(--border-width);
-    }
-}
-
-.imageMobile {
-    display: none;
-
-    @media (max-width: 600px) {
-        display: block;
-    }
-}
-
-@media (max-width: 600px) {
-    .elementHeaderImageDesktop {
-        display: none;
     }
 }

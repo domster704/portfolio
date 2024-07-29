@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useSelector} from "react-redux";
 import * as style from './AllProjects.module.css'
 
@@ -7,11 +7,11 @@ import {Link} from "react-router-dom";
 import ProjectRow from "./ProjectRow/ProjectRow";
 
 const AllProjects = () => {
-    const projects = useSelector(state => state.projects);
+    const projectsStore = useSelector(state => state.projects);
 
-    React.useEffect(() => {
+    useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+    }, []);
 
     return (
         <div className={style.projects}>
@@ -33,7 +33,7 @@ const AllProjects = () => {
                     <p className={`${style.col5} ${style.tableHeader} `}>Ссылки</p>
                 </div>
                 {
-                    projects.list.map((item, index) => {
+                    projectsStore.list.map((item, index) => {
                         return <ProjectRow key={index} project={item}/>
                     })
                 }

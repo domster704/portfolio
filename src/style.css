@@ -12,7 +12,7 @@
 }
 
 :root {
-    --block-width: 33em;
+    --block-width: 35em;
     --main-padding: calc((100vw - 2 * var(--block-width)) / 2);
 
     --gray-color: #8997ab;

@@ -3,7 +3,6 @@ import * as styleAllProject from '../AllProjects.module.css'
 import * as styleJob from '../../Resume/Main/ListElement/ListElement.module.css'
 
 import linkGray from '../../../../assets/image/svg/link_gray.svg'
-import linkBlue from '../../../../assets/image/svg/link_blue.svg'
 import link from '../../../../assets/image/svg/link.svg'
 
 const ProjectRow = ({project}) => {
@@ -11,7 +10,7 @@ const ProjectRow = ({project}) => {
         <div className={styleAllProject.row}>
             <div className={styleAllProject.col1}>{project.year}</div>
             <div className={`${styleAllProject.col2} ${styleAllProject.col2_desk}`}>{project.name}</div>
-            <div className={styleAllProject.col2_new}>
+            <div className={styleAllProject.col2_with_link}>
                 <a href={project.links[0].link}>
                     <div className={`${styleAllProject.col2} ${styleAllProject.col2_mobile}`}>
                         <div>{project.name}</div>
@@ -37,11 +36,6 @@ const ProjectRow = ({project}) => {
                                     <div className={styleAllProject.link_element_default}>
                                         <img className={styleAllProject.col5_link}
                                              src={linkGray}
-                                             alt=""/>
-                                    </div>
-                                    <div className={styleAllProject.link_element_hover}>
-                                        <img className={styleAllProject.col5_link}
-                                             src={linkBlue}
                                              alt=""/>
                                     </div>
                                 </div>

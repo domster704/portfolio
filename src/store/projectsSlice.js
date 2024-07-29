@@ -85,7 +85,7 @@ const initialState = {
             link: "https://github.com/domster704/MARS-work",
             main: true
         }],
-        year: "2021 - 2023",
+        year: "2021",
         target: "ООО Янтарь+",
     }, {
         active: true,
