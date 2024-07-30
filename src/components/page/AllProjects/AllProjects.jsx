@@ -17,9 +17,9 @@ const AllProjects = () => {
         <div className={style.projects}>
             <Link to="/">
                 <div className={style.back}>
-                    <div className={style.backImageBlock}>
+                    <span className={style.back__imgBlock}>
                         <img alt="" src={backSvg}/>
-                    </div>
+                    </span>
                     <p>Полное резюме</p>
                 </div>
             </Link>

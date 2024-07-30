@@ -9,13 +9,14 @@ const ProjectRow = ({project}) => {
     return (
         <div className={styleAllProject.row}>
             <div className={styleAllProject.col1}>{project.year}</div>
-            <div className={`${styleAllProject.col2} ${styleAllProject.col2_desk}`}>{project.name}</div>
-            <div className={styleAllProject.col2_with_link}>
+            <div className={styleAllProject.col2}>
                 <a href={project.links[0].link}>
-                    <div className={`${styleAllProject.col2} ${styleAllProject.col2_mobile}`}>
-                        <div>{project.name}</div>
-                        <div><img className={styleAllProject.col5_link} src={link} alt=""/></div>
-                    </div>
+                    {project.name}
+                    <span className={styleAllProject.linkSvg_block}>
+                        <img className={styleAllProject.linkSvg_block__imgLink}
+                             src={link}
+                             alt=""/>
+                    </span>
                 </a>
             </div>
             <div className={styleAllProject.col3}>{project.target}</div>
@@ -29,18 +30,20 @@ const ProjectRow = ({project}) => {
             <div className={styleAllProject.col5}>
                 {
                     project.links.map((link, index) => {
-                        return <div key={index} className={styleAllProject.link_element}>
-                            <a href={link.link} target="_blank">
-                                <div>
-                                    <div className={styleAllProject.col5_text}>{link.name}</div>
-                                    <div className={styleAllProject.link_element_default}>
-                                        <img className={styleAllProject.col5_link}
+                        return (
+                            <div key={index} className={styleAllProject.link_element}>
+                                <a className={styleAllProject.col5_text}
+                                   href={link.link}
+                                   target="_blank">
+                                    {link.name}
+                                    <span className={styleAllProject.linkSvg_block}>
+                                        <img className={styleAllProject.linkSvg_block__imgLink}
                                              src={linkGray}
                                              alt=""/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                                    </span>
+                                </a>
+                            </div>
+                        );
                     })
                 }
             </div>

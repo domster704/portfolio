@@ -1,12 +1,10 @@
 .headerBlock {
     position: fixed;
-    padding: 6em 0;
+
     width: var(--block-width);
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    align-self: stretch;
     height: 100%;
+
+    padding-block: 6em;
 
     @media (max-width: 1024px) {
         position: relative;
@@ -37,8 +35,9 @@
     color: var(--light-gray);
     font-size: 1em;
     line-height: 1.5em;
-    margin-top: 1em;
+
     max-width: 20em;
+    margin-top: 1em;
 }
 
 .blockLinkList {
@@ -51,11 +50,13 @@
 
 .blockLinkList_element {
     display: flex;
-    padding: 0.6875rem 0.36125rem 0.75rem 0;
-    align-items: center;
     gap: 1rem;
-    user-select: none;
+    align-items: center;
+
     max-width: max-content;
+    user-select: none;
+
+    padding: 0.6875rem 0.36125rem 0.75rem 0;
 
     .blockLinkList_element_line {
         width: 2rem;
@@ -85,24 +86,10 @@
     &:not(.active):hover > .blockLinkList_element_line {
         width: 4rem;
         background: var(--text-color);
-        animation-duration: .5s;
-        animation-name: hover-header-list-element;
     }
 
     &:hover {
         cursor: pointer;
-    }
-}
-
-@keyframes hover-header-list-element {
-    0% {
-        background: #475569;
-        width: 2rem;
-    }
-
-    100% {
-        width: 4rem;
-        background: var(--text-color);
     }
 }
 
@@ -111,7 +98,7 @@
     gap: max(1rem, 1.25vw);
     align-items: center;
     align-content: center;
-    align-self: stretch;
+
     margin-top: 2rem;
 }
 
