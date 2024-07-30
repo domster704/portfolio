@@ -1,7 +1,8 @@
 import React from 'react';
 import * as style from './ListElement.module.css'
 
-import link from '../../../../../assets/image/svg/link.svg'
+import link from '/src/assets/image/svg/link.svg'
+import Skill from "../../../UI/Skill/Skill";
 
 const Job = ({job}) => {
     return (
@@ -34,10 +35,7 @@ const Job = ({job}) => {
                     <div className={style.skillsList}>
                         {
                             job.skills.map((skill, index) => {
-                                return <p key={index}
-                                          className={style.skill}>
-                                    {skill}
-                                </p>
+                                return <Skill key={index}>{skill}</Skill>
                             })
                         }
                     </div>

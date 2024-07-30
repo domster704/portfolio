@@ -2,10 +2,10 @@ import React, {useEffect} from 'react';
 import * as style from './Header.module.css'
 import * as styleMain from '../Main/Main.module.css'
 
-import githubLogo from '../../../../assets/image/svg/github.svg';
-import mailLogo from '../../../../assets/image/svg/mail.svg';
-import whatsappLogo from '../../../../assets/image/svg/whatsapp.svg';
-import tgLogo from '../../../../assets/image/svg/tg.svg';
+import githubLogo from '/src/assets/image/svg/github.svg';
+import mailLogo from '/src/assets/image/svg/mail.svg';
+import whatsappLogo from '/src/assets/image/svg/whatsapp.svg';
+import tgLogo from '/src/assets/image/svg/tg.svg';
 
 export const SocialNetwork = ({isMobile = false}) => {
     return (

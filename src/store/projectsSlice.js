@@ -1,15 +1,15 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-import PP from '../assets/image/project/compressed/PP.webp'
-import berest from '../assets/image/project/compressed/berest.webp'
-import MARS_app from '../assets/image/project/compressed/MARS_app.webp'
-import fillWordQT from '../assets/image/project/compressed/fillWordQT.webp'
-import YandexGoTest from '../assets/image/project/compressed/YandexGoTest.webp'
-import siteSQB from '../assets/image/project/compressed/siteSQB.webp'
-import RehabCenter from '../assets/image/project/compressed/RehabCenter.webp'
-import LCT from '../assets/image/project/compressed/LCT.webp'
-import PBS from '../assets/image/project/compressed/PBS.webp'
-import tu from '../assets/image/project/compressed/tu.webp'
+import PP from '/src/assets/image/project/compressed/PP.webp'
+import berest from '/src/assets/image/project/compressed/berest.webp'
+import MARS_app from '/src/assets/image/project/compressed/MARS_app.webp'
+import fillWordQT from '/src/assets/image/project/compressed/fillWordQT.webp'
+import YandexGoTest from '/src/assets/image/project/compressed/YandexGoTest.webp'
+import siteSQB from '/src/assets/image/project/compressed/siteSQB.webp'
+import RehabCenter from '/src/assets/image/project/compressed/RehabCenter.webp'
+import LCT from '/src/assets/image/project/compressed/LCT.webp'
+import PBS from '/src/assets/image/project/compressed/PBS.webp'
+import tu from '/src/assets/image/project/compressed/tu.webp'
 
 // https://www.simpleimageresizer.com/resize/webp
 

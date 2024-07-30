@@ -1,8 +1,8 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-import ITS from '../assets/image/certificate/ITS_S.webp';
-import CP from '../assets/image/certificate/CP_S.webp';
-import KM from '../assets/image/certificate/KM_S.webp';
+import ITS from '/src/assets/image/certificate/ITS_S.webp';
+import CP from '/src/assets/image/certificate/CP_S.webp';
+import KM from '/src/assets/image/certificate/KM_S.webp';
 
 const initialState = {
     list: [{

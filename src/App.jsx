@@ -4,6 +4,8 @@ import Resume from "./components/page/Resume/Resume";
 
 import * as style from './style.css';
 import AllProjects from "./components/page/AllProjects/AllProjects";
+import ProjectPopup from "./components/page/UI/ProjectPopup/ProjectPopup";
+import {useSelector} from "react-redux";
 
 const App = () => {
     const spotlightRef = React.useRef(null);
@@ -30,6 +32,7 @@ const App = () => {
 
     return (
         <>
+            <ProjectPopup/>
             <div className={style.spotlight} ref={spotlightRef}></div>
             <HashRouter>
                 <Routes>

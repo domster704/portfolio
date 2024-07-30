@@ -1,0 +1,14 @@
+.skill {
+    display: inline-block;
+    padding: 0.1875em 0.78125em 0.3125em 0.75em;
+    align-items: center;
+    border-radius: 624.9375em;
+    background: rgba(45, 212, 191, 0.10);
+    margin-bottom: 0.37em;
+    margin-right: 0.37em;
+
+    color: #5EEAD4;
+    font-size: 0.875em;
+    font-weight: 500;
+    line-height: 1.25em;
+}

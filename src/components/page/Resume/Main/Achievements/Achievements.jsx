@@ -2,9 +2,9 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import * as style from './Achievements.module.css';
 
-import arrow_back from "../../../../../assets/image/svg/arrow_back.svg";
-import arrow_next from "../../../../../assets/image/svg/arrow_next.svg";
-import {setActive} from "../../../../../store/achievementsSlice";
+import arrow_back from "/src/assets/image/svg/arrow_back.svg";
+import arrow_next from "/src/assets/image/svg/arrow_next.svg";
+import {setActive} from "/src/store/achievementsSlice";
 
 const AchievementsList = ({
                               sliderBlockRef,

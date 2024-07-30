@@ -3,7 +3,7 @@ import {useSelector} from "react-redux";
 import * as style from './Main.module.css'
 import * as styleMain from './Main.module.css'
 
-import next from '../../../../assets/image/svg/next.svg';
+import next from '/src/assets/image/svg/next.svg';
 
 import {SocialNetwork} from "../Header/Header";
 import Job from "./ListElement/Job";
@@ -79,19 +79,17 @@ const Main = () => {
                         href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=34&INDEX=Y"
                         target="_blank">сертификацию 1C-Битрикс в области "Контент-менеджер".</a>
                     </p>
-                    <div>
-                        <p>Мои ключевые навыки включают: создание и настройка сайтов под управлением
-                            <a href="https://www.1c-bitrix.ru/products/cms/" target="_blank">1С-Битрикс: Управление
-                                сайтом</a>, разработка клиент-серверных приложений, PWA, SPA на
-                            <a href="https://react.dev/" target="_blank">&nbsp;ReactJS</a> +
-                            <a href="https://palletsprojects.com/p/flask/" target="_blank">&nbsp;Flask</a>/
-                            <a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a>/
-                            <a href="https://expressjs.com/ru/" target="_blank">ExpressJS</a>,
-                            конфигурация Linux-серверов, <a href="https://nginx.org/ru/" target="_blank">Nginx</a>,
-                            <a href="https://www.postgresql.org/" target="_blank">&nbsp;PostgreSQL</a>,
-                            создание кроссплатформенного ПО на <a href="https://www.qt.io/" target="_blank">QT</a>.
-                        </p>
-                    </div>
+                    <p>Мои ключевые навыки включают: создание и настройка сайтов под управлением
+                        <a href="https://www.1c-bitrix.ru/products/cms/" target="_blank">1С-Битрикс: Управление
+                            сайтом</a>, разработка клиент-серверных приложений, PWA, SPA на
+                        <a href="https://react.dev/" target="_blank">&nbsp;ReactJS</a> +
+                        <a href="https://palletsprojects.com/p/flask/" target="_blank">&nbsp;Flask</a>/
+                        <a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a>/
+                        <a href="https://expressjs.com/ru/" target="_blank">ExpressJS</a>,
+                        конфигурация Linux-серверов, <a href="https://nginx.org/ru/" target="_blank">Nginx</a>,
+                        <a href="https://www.postgresql.org/" target="_blank">&nbsp;PostgreSQL</a>,
+                        создание кроссплатформенного ПО на <a href="https://www.qt.io/" target="_blank">QT</a>.
+                    </p>
                     <p>
                         Также я получаю высшее образование в <a href="https://misis.ru/" target="_blank">&nbsp;НИТУ
                         МИСИС&nbsp;</a> по специальности <a

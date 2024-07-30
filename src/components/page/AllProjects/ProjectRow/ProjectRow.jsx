@@ -1,13 +1,20 @@
 import React from 'react';
 import * as styleAllProject from '../AllProjects.module.css'
-import * as styleJob from '../../Resume/Main/ListElement/ListElement.module.css'
 
-import linkGray from '../../../../assets/image/svg/link_gray.svg'
-import link from '../../../../assets/image/svg/link.svg'
+import linkGray from '/src/assets/image/svg/link_gray.svg'
+import link from '/src/assets/image/svg/link.svg'
+import Skill from "../../UI/Skill/Skill";
+import {useDispatch} from "react-redux";
+import {setProject} from "../../../../store/filter";
 
 const ProjectRow = ({project}) => {
+    const dispatch = useDispatch();
+
     return (
-        <div className={styleAllProject.row}>
+        <div className={styleAllProject.row}
+             onClick={() => {
+                 dispatch(setProject(project));
+             }}>
             <div className={styleAllProject.col1}>{project.year}</div>
             <div className={styleAllProject.col2}>
                 <a href={project.links[0].link}>
@@ -23,7 +30,7 @@ const ProjectRow = ({project}) => {
             <div className={styleAllProject.col4}>
                 {
                     project.skills.map((skill, index) => {
-                        return <div key={index} className={styleJob.skill}>{skill}</div>
+                        return <Skill key={index}>{skill}</Skill>
                     })
                 }
             </div>
