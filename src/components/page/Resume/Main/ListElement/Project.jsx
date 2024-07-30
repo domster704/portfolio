@@ -36,10 +36,10 @@ const Project = ({project}) => {
                     <div className={style.skillsList}>
                         {
                             project.skills.map((skill, index) => {
-                                return <div key={index}
-                                            className={style.skill}>
+                                return <p key={index}
+                                          className={style.skill}>
                                     {skill}
-                                </div>
+                                </p>
                             })
                         }
                     </div>

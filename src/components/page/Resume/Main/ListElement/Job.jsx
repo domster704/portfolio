@@ -24,9 +24,9 @@ const Job = ({job}) => {
                         <div className={style.elementBlockUnderHeader}>
                             {
                                 job.subPosition.map((pos, index) =>
-                                    <div key={index}>
+                                    <p key={index}>
                                         {pos}
-                                    </div>)
+                                    </p>)
                             }
                         </div>
                     </div>
@@ -34,10 +34,10 @@ const Job = ({job}) => {
                     <div className={style.skillsList}>
                         {
                             job.skills.map((skill, index) => {
-                                return <div key={index}
-                                            className={style.skill}>
+                                return <p key={index}
+                                          className={style.skill}>
                                     {skill}
-                                </div>
+                                </p>
                             })
                         }
                     </div>
