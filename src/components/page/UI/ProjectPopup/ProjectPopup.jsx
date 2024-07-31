@@ -30,7 +30,7 @@ const ProjectPopup = () => {
     // }, [project]);
 
     return (
-        !!project && <div className={`${style.popup} ${style.active}`}>
+        <div className={`${style.popup} ${!!project && style.active}`}>
             <div className={style.popup__overlay}
                  onClick={() => {
                      dispatch(setProject(null));
@@ -46,22 +46,22 @@ const ProjectPopup = () => {
 
                 <div className={style.popup__columns}>
                     <img className={style.popup__image}
-                         src={project.image}
+                         src={project?.image}
                          alt=""
                          loading='lazy'/>
                     <div className={style.popup__info}>
-                        <p><b>Проект:&nbsp;&nbsp;</b> {project.name}</p>
+                        <p><b>Проект:&nbsp;&nbsp;</b> {project?.name}</p>
                         <div>
                             <b>Технологии:&nbsp;&nbsp;</b>
                             {
-                                project.skills.map((skill, index) => {
+                                project?.skills.map((skill, index) => {
                                     return <Skill key={index}>{skill}</Skill>
                                 })
                             }
                         </div>
                     </div>
                 </div>
-                <p className={style.popup__description}>{project.about}</p>
+                <p className={style.popup__description}>{project?.about}</p>
             </div>
         </div>
     );
