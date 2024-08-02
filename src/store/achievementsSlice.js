@@ -1,24 +1,32 @@
 import {createSlice} from '@reduxjs/toolkit';
+import ITS from '/src/assets/image/certificate/compressed/ITS_S.webp';
+import CP from '/src/assets/image/certificate/compressed/CP_S.webp';
+import KM from '/src/assets/image/certificate/compressed/KM_S.webp';
+import LCT2024 from '/src/assets/image/certificate/compressed/LCT2024_S.webp';
 
-import ITS from '/src/assets/image/certificate/ITS_S.webp';
-import CP from '/src/assets/image/certificate/CP_S.webp';
-import KM from '/src/assets/image/certificate/KM_S.webp';
 
 const initialState = {
-    list: [{
-        png: ITS,
-        pdf: 'https://portfolio.ln-kr.ru/data/docs/ITS.pdf',
-        isActive: true,
-    }, {
-        png: CP,
-        pdf: 'https://portfolio.ln-kr.ru/data/docs/CP.pdf',
-        isActive: false,
-    }, {
-        png: KM,
-        pdf: 'https://portfolio.ln-kr.ru/data/docs/KM.pdf',
-        isActive: false,
-    },],
+    list: [
+        {
+            png: ITS,
+            pdf: 'https://portfolio.ln-kr.ru/data/docs/certificate/ITS.pdf',
+            isActive: true,
+        }, {
+            png: LCT2024,
+            pdf: 'https://portfolio.ln-kr.ru/data/docs/certificate/LCT2024.pdf',
+            isActive: false,
+        }, {
+            png: CP,
+            pdf: 'https://portfolio.ln-kr.ru/data/docs/certificate/CP.pdf',
+            isActive: false,
+        }, {
+            png: KM,
+            pdf: 'https://portfolio.ln-kr.ru/data/docs/certificate/KM.pdf',
+            isActive: false,
+        },
+    ],
 };
+
 
 export const achievementsSlice = createSlice({
     name: 'achievementsSlice',
