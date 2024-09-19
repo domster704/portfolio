@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: .15s all ease;
+    transition: .15s font-size ease;
     font-family: "Murecho", sans-serif;
 }
 
@@ -40,7 +40,11 @@ html {
         border-radius: 0.5em;
     }
 
-    @media (min-width: 1920px) {
+    @media (min-width: 1600px) {
+        font-size: max(1em, 0.9vw);
+    }
+
+    @media (min-width: 2000px) {
         font-size: max(1em, 1vw);
     }
 }
