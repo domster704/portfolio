@@ -26,7 +26,7 @@ const initialState = {
             isActive: false,
         }, {
             png: AL_1701,
-            pdf: 'https://portfolio.ln-kr.ru/data/docs/certificate/AL_1701.pdf',
+            pdf: 'https://portfolio.ln-kr.ru/data/docs/certificate/AL-1701.pdf',
             isActive: false,
         },
     ],

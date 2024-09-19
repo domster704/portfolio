@@ -27,13 +27,21 @@ const initialState = {
         about: "Верстка, разработка сайтов под CMS Битрикс.<br> Выполнение работ на существующих сайтах",
         skills: ["JavaScript", "HTML5", "CSS3", "CMS", "Bitrix CMS", "Figma", "PHP", "Bitrix24", "Flexbox", "БЭМ"]
     }, {
-        date: "апрель 2024 — сейчас",
+        date: "апрель 2024 — август 2024",
         position: "Full-stack developer",
         subPosition: ["Web-разработчик"],
         companyName: "ТОО \"Асмас\"",
         companyURL: "https://asmas.kz/",
         about: "Разработка и создание веб-сайтов, мобильные приложений, а также техническая поддержка и обслуживание информационных систем",
         skills: ["React.JS", "PostgreSQL", "JavaScript", "Linux", "Nginx", "Figma", "HTML5", "CSS3", "Flexbox"]
+    }, {
+        date: "август 2024 — сейчас",
+        position: "DevOps developer",
+        subPosition: ["FullStack-разработчик", "Frontend-разработчик"],
+        companyName: "Novikov TV",
+        companyURL: "https://novikovtv.tv/",
+        about: "Программирование баз данных и управление, настройка API для интеграции с внешними системами, отладка, написание модульных и интеграционных тестов",
+        skills: ["Linux", "Docker", "TypeScript", "SQL", "PostgreSQL", "NodeJS", "React.JS", "BalenaOS", "BalenaCloud", "OpenBalena"]
     }].reverse()
 };
 

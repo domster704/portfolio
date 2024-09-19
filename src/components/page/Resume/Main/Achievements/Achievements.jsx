@@ -17,7 +17,7 @@ const AchievementsList = ({
 
     useEffect(() => {
         let sliderBlock = sliderBlockRef.current;
-        let sliderElements = Array.from(sliderBlock.children);
+        let sliderElements = Array.from(sliderBlock.children[1].children);
         let arrowBack = sliderBlockArrowBackRef.current;
         let arrowNext = sliderBlockArrowNextRef.current;
 
