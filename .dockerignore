@@ -1,0 +1,9 @@
+.gitignore
+.idea/
+.git/
+node_modules/
+build/
+!/build/favicon.svg
+!/build/index.html
+#!/build/main.bundle.js
+!/build/resume.ico
