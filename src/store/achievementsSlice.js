@@ -4,6 +4,7 @@ import CP from '/src/assets/image/certificate/compressed/CP_S.webp';
 import KM from '/src/assets/image/certificate/compressed/KM_S.webp';
 import LCT2024 from '/src/assets/image/certificate/compressed/LCT2024_S.webp';
 import AL_1701 from '/src/assets/image/certificate/compressed/AL-1701_S.webp';
+import AL_1702 from '/src/assets/image/certificate/compressed/AL-1702_S.webp';
 
 
 const initialState = {
@@ -27,6 +28,10 @@ const initialState = {
         }, {
             png: AL_1701,
             pdf: 'https://portfolio.ln-kr.ru/data/docs/certificate/AL-1701.pdf',
+            isActive: false,
+        }, {
+            png: AL_1702,
+            pdf: 'https://portfolio.ln-kr.ru/data/docs/certificate/AL-1702.pdf',
             isActive: false,
         },
     ],
