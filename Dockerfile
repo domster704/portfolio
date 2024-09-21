@@ -4,11 +4,15 @@ RUN apk update --no-cache && apk upgrade
 
 WORKDIR /var/www/portfolio
 
-COPY .babelrc package.json webpack.config.js ./
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY .babelrc webpack.config.js ./
 COPY build/ build/
 COPY src/ src/
 
-RUN npm install && npm run-script build
+RUN npm run-script build
+
 
 FROM nginx:1.27.1-alpine AS nginx-stage
 
