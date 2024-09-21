@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo git reset HEAD --hard && sudo git pull
+
 CONTAINER_NAME="portfolio-container"
 
 docker stop $CONTAINER_NAME &&
