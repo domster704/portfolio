@@ -8,7 +8,7 @@ COPY .babelrc package.json webpack.config.js ./
 COPY build/ build/
 COPY src/ src/
 
-RUN npm install && npm run-script build
+#RUN npm install && npm run-script build
 
 FROM nginx:1.27.1-alpine AS nginx-stage
 
