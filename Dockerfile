@@ -1,6 +1,6 @@
 FROM node:22-alpine3.19 AS builder-stage
 
-RUN apk update && apk upgrade
+RUN apk update --no-cache && apk upgrade
 
 WORKDIR /var/www/portfolio
 
