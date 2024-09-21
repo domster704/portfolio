@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-docker build -t portfolio:latest . && > docker run -d -it -p 8080:80 portfolio:latest --name portfolio-container
+docker build -t portfolio:latest . &&  docker run -it -p 8080:80 -d --name portfolio-container portfolio:latest
