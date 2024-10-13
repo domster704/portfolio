@@ -25,7 +25,7 @@ WORKDIR /etc/nginx/conf.d
 
 COPY nginx/portfolio-front.conf ./default.conf
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
 
