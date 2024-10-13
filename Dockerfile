@@ -1,4 +1,5 @@
 FROM node:22-alpine3.19 AS builder-stage
+LABEL author=domste704
 
 RUN apk update --no-cache && apk upgrade
 
