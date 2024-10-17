@@ -45,7 +45,7 @@ html {
     }
 
     @media (min-width: 2000px) {
-        font-size: max(1em, 1vw);
+        font-size: max(1em, 0.8vw);
     }
 }
 

@@ -17,9 +17,11 @@ RUN npm run-script build
 
 FROM nginx:1.27.1-alpine AS nginx-stage
 
-WORKDIR /var/www/portfolio/build
 
-COPY --from=builder-stage /var/www/portfolio/build .
+WORKDIR /var/www/portfolio/
+
+COPY --from=builder-stage /var/www/portfolio/src/assets/ ./src/assets/
+COPY --from=builder-stage /var/www/portfolio/build ./build/
 
 WORKDIR /etc/nginx/conf.d
 

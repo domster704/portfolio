@@ -25,10 +25,6 @@ const ProjectPopup = () => {
         }
     }, [])
 
-    // useEffect(() => {
-    //     document.body.style.overflow = !!project ? 'hidden' : '';
-    // }, [project]);
-
     return (
         <div className={`${style.popup} ${!!project && style.active}`}>
             <div className={style.popup__overlay}

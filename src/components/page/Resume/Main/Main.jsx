@@ -24,7 +24,6 @@ const Main = () => {
         function handleScroll() {
             const projectsList = document.querySelector(`.${styleMain.projectsList}`);
             const jobList = document.querySelector(`.${styleMain.jobsList}`);
-            const about = document.querySelector(`.${styleMain.about}`);
 
             let listOfChosenItems = document.getElementsByClassName(styleHeader.blockLinkList_element);
             for (let i of listOfChosenItems) {
