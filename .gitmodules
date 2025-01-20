@@ -1,0 +1,6 @@
+[submodule "portfolio-react"]
+	path = portfolio-react
+	url = https://github.com/domster704/portfolio-react.git
+[submodule "portfolio-cms"]
+	path = portfolio-cms
+	url = https://github.com/domster704/portfolio-cms.git
