@@ -1,7 +1,7 @@
 git reset --hard HEAD
 git pull origin master
 cd portfolio-cms && git reset --hard HEAD && git pull origin master
-cd ../portfolio-react && git reset --hard HEAD && git pull origin master
+cd ../portfolio-react && git reset --hard HEAD && git pull origin react
 cd ../
 
 docker compose down &&
