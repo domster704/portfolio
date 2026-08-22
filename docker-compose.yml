@@ -10,7 +10,7 @@ services:
     container_name: strapi
     build: portfolio-cms
     image: strapi:latest
-    restart: unless-stopped
+    restart: always
     env_file: .env
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
@@ -47,6 +47,7 @@ services:
       - strapi-data:/var/lib/postgresql
     ports:
       - ${DATABASE_PORT}:5432
+    restart: always
 
 volumes:
   strapi-data:
