@@ -10,12 +10,12 @@ services:
     container_name: strapi
     build: portfolio-cms
     image: strapi:latest
-    restart: unless-stopped
+    restart: always
     env_file: .env
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
-      DATABASE_HOST: ${DATABASE_HOST}
-      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_HOST: postgres-strapi
+      DATABASE_PORT: 5432
       DATABASE_NAME: ${DATABASE_NAME}
       DATABASE_USERNAME: ${DATABASE_USERNAME}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
@@ -32,13 +32,22 @@ services:
       - ./public/uploads:/opt/app/public/uploads
     ports:
       - "1337:1337"
-    networks:
-      - strapi
+    depends_on:
+      - postgres-strapi
 
+  postgres-strapi:
+    image: postgres:18-trixie
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    volumes:
+      - strapi-data:/var/lib/postgresql
+    ports:
+      - ${DATABASE_PORT}:5432
+    restart: always
 
 volumes:
   strapi-data:
-
-networks:
-  strapi:
-    driver: bridge
